@@ -6,7 +6,6 @@ import company from "../assets/company.jpg"
 import design1 from "../assets/design1.jpg"
 import design2 from "../assets/design2.jpg"
 import design3 from "../assets/design3.jpg"
-import "../output.css"
 import Projects from './Projects';
 import maskImg from "../assets/maskImg.jpg"
 import Carousal from './Carousal';
