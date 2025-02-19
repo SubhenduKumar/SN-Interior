@@ -1,0 +1,4 @@
+[build]
+base = "SN_Interior/app"  # <-- Make sure this matches your project structure
+command = "npm run build"
+publish = "SN_Interior/app/build"
