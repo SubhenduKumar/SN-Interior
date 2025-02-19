@@ -1,0 +1,128 @@
+/* Gallery Styling */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  /* Center align the gallery */
+}
+
+.gallery-item {
+  width: 200px;
+  height: 250px;
+  cursor: pointer;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+.image:hover {
+  transform: scale(1.05);
+  /* Slight zoom on hover */
+}
+
+/* Modal Overlay Styling */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+  /* Add padding for smaller screens */
+  overflow: auto;
+  /* Ensure scrollable content for smaller devices */
+}
+
+.modal-content {
+  position: relative;
+  max-width: 45%;
+  /* Limit width for smaller screens */
+  max-height: 100%;
+  /* Limit height to fit smaller screens */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-image {
+  width: 100%;
+  height: 100%;
+  /* Maintain aspect ratio */
+  border-radius: 8px;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.close-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+
+
+
+
+/* ============= Responsive Ipad ==================== */
+@media only screen and (max-width: 992px) {
+  .modal-content {
+    position: relative;
+    max-width: 70%;
+    /* Limit width for smaller screens */
+    max-height: 100%;
+    /* Limit height to fit smaller screens */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-image {
+    width: 100%;
+    height: 100%;
+    /* Maintain aspect ratio */
+    border-radius: 8px;
+  }
+}
+
+/* ============= Responsive Iphone ==================== */
+@media only screen and (max-width: 480px) {
+  .modal-content {
+    position: relative;
+    max-width: 100%;
+    /* Limit width for smaller screens */
+    max-height: 40%;
+    /* Limit height to fit smaller screens */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-image {
+    width: 100%;
+    height: 90%;
+    /* Maintain aspect ratio */
+    border-radius: 8px;
+  }
+ 
+}
